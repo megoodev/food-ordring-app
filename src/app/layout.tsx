@@ -39,7 +39,6 @@ export default function RootLayout({
         <ReduxProvider >
           <Header />
           {children}
-          <Footer />
           <Toaster position="top-center"/>
         </ReduxProvider>
         </NextAuthSessionProvider>

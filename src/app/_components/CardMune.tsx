@@ -13,7 +13,7 @@ import { productWithRelation } from "@/lib/types/types"
 
 const CardMune = ({ product }: { product: productWithRelation }) => {
   return (
-    <Card className="relative bg-white w-full max-w-xs sm:max-w-sm md:max-w-md rounded-3xl shadow-xl border border-gray-100 p-0 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <Card className="relative bg-white w-full max-w-xs mx-auto mb-10 sm:max-w-sm md:max-w-md rounded-3xl shadow-xl border border-gray-100 p-0 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
       {/* Image with colored ring */}
       <div className="bg-white rounded-xl p-1 shadow-md border border-gray-100 transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105">
         <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-xl overflow-hidden">

@@ -26,7 +26,7 @@ const AddCategory = () => {
     if(state.status && state.status === 201){
       toast.success(state?.message as string || "Category added successfully");
     }
-  }, [state.status]);
+  }, [state.status && state.status === 201]);
   return (
     <section className="py-10 mb-5 flex-col container ">
       <div className="mb-10 ">

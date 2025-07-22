@@ -4,7 +4,7 @@ const Menu = async ({ products }: { products: productWithRelation[] }) => {
 
 
   return (
-    <div className="flex flex-wrap gap-5 justify-evenly mt-5 section-gap">
+    <div className="grid grid-cols-1 md:grid-cols-2 overflow-x-auto  gap-10 mt-5 ">
 
       {products.map((product) => {
         return (

@@ -13,7 +13,7 @@ const PageCart = () => {
   const total = subtotal + 10 + tax + deliveryFee
   return (
     <main>
-      <div className='container h-[75.5vh]'>
+      <div className='container h-[75.5vh] mb-10'>
         <h1 className='text-2xl font-bold text-center my-8'>Cart</h1>
         {cart.length > 0 ? (
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 grid-rows-1'>

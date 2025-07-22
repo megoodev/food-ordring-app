@@ -12,6 +12,7 @@ import useClientSession from "@/hooks/useClientSession"
 
 const Navbar = ({ intialSession }: { intialSession : Session | null}) => {
   const links = [
+    { id: crypto.randomUUID(), title: 'Home', href: Routes.ROOT },
     { id: crypto.randomUUID(), title: 'Menu', href: Routes.MENU },
     { id: crypto.randomUUID(), title: 'About', href: Routes.ABOUT },
     { id: crypto.randomUUID(), title: 'Contact', href: Routes.CONTACT },
@@ -37,7 +38,7 @@ const Navbar = ({ intialSession }: { intialSession : Session | null}) => {
           </li>
           {links.map(link => (
             <li key={link.id}>
-              <Link onClick={() => setOpen(false)} className={ ' w-full lg:w-fit rounded-fullfont-semibold px-2 py-1 hover:text-primary duration-200 transition-colors'} href={`/${link.href}`}>
+              <Link onClick={() => setOpen(false)} className={`${link.href === Routes.ROOT && 'lg:hidden'} w-full lg:w-fit rounded-fullfont-semibold px-2 py-1 hover:text-primary duration-200 transition-colors`} href={`/${link.href}`}>
                 {link.title}
               </Link>
             </li>
