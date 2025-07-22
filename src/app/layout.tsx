@@ -21,8 +21,8 @@ const roboto = Roboto({
 
 
 export const metadata: Metadata = {
-  title: "UrbanEats | Modern Food Delivery",
-  description: "UrbanEats brings fresh, delicious meals to your door. Explore our menu and order your favorites online.",
+  title: "Pizza | Modern Food Delivery",
+  description: "Pizza brings fresh, delicious meals to your door. Explore our menu and order your favorites online.",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ import { FormatCurrency } from "@/lib/Formatters"
 
 const CheckoutForm = ({ total }: { total: number }) => {
   return (
-    <form>
+    <form className="mb-10">
       <div className='grid gap-4'>
         <div className='grid gap-1'>
           <Label htmlFor='phone' className='text-foreground'>
@@ -20,7 +20,7 @@ const CheckoutForm = ({ total }: { total: number }) => {
           />
         </div>
         <div className='grid gap-1'>
-          <Label htmlFor='address' className='text-accent'>
+          <Label htmlFor='address' className='text-foreground'>
             Street address
           </Label>
           <Textarea
@@ -32,7 +32,7 @@ const CheckoutForm = ({ total }: { total: number }) => {
         </div>
         <div className='grid grid-cols-2 gap-2'>
           <div className='grid gap-1'>
-            <Label htmlFor='postal-code' className='text-accent'>
+            <Label htmlFor='postal-code' className='text-foreground'>
               Postal code
             </Label>
             <Input
@@ -43,7 +43,7 @@ const CheckoutForm = ({ total }: { total: number }) => {
             />
           </div>
           <div className='grid gap-1'>
-            <Label htmlFor='city' className='text-accent'>
+            <Label htmlFor='city' className='text-foreground'>
               City
             </Label>
             <Input
@@ -54,7 +54,7 @@ const CheckoutForm = ({ total }: { total: number }) => {
             />
           </div>
           <div className='grid gap-1'>
-            <Label htmlFor='country' className='text-accent'>
+            <Label htmlFor='country' className='text-foreground'>
               Country
             </Label>
             <Input
