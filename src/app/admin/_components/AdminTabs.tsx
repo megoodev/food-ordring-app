@@ -4,11 +4,11 @@ import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 const AdminTabs = () => {
   const AdminLinks = [
-    { name: Routes.ADMIN,     path: `/${Routes.ADMIN}` },
+    { name: Routes.ADMIN, path: `/${Routes.ADMIN}` },
     { name: Pages.CATEGORIES, path: `/${Routes.ADMIN}/${Pages.CATEGORIES}` },
-    { name: 'Product',        path: `/${Routes.ADMIN}/products` },
-    { name: Pages.USERS,      path: `/${Routes.ADMIN}/${Pages.USERS}` },
-    { name: Pages.ORDERS,     path: `/${Routes.ADMIN}/${Pages.ORDERS}` },
+    { name: Pages.MENU_ITEMS, path: `/${Routes.ADMIN}/${Pages.MENU_ITEMS}` },
+    { name: Pages.USERS, path: `/${Routes.ADMIN}/${Pages.USERS}` },
+    { name: Pages.ORDERS, path: `/${Routes.ADMIN}/${Pages.ORDERS}` },
   ]
   return (
     <div className="element-center mt-5 pt-5">

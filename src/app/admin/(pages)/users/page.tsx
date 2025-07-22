@@ -14,11 +14,11 @@ const usersPage = async () => {
       <div className='container element-center py-10'>
 
         {users.map((user: User) => (
-          <div key={user.id} className='container flex justify-between items-center w-full p-5 border bg-white rounded-xl  py-5'>
-            <h3>{user.name}</h3>
-            <p>{user.email}</p>
-            <p>{user.role}</p>
-            <div className='flex gap-2'>
+          <div key={user.id} className='container w-[800px] max-w-[99%] flex-col  md:flex-row flex md:justify-between items-start gap-2 md:items-center p-5 border bg-white rounded-xl  py-5'>
+            <h3 className='text-md font-light'><span className='md:hidden inline-block w-[50px] font-bold'>Name: </span>{user.name}</h3>
+            <p className='text-md font-light'><span className='md:hidden inline-block w-[50px] font-bold'>Email: </span>{user.email}</p>
+            <p className='text-md font-light'><span className='md:hidden inline-block w-[50px] font-bold'>Role: </span>{user.role}</p>
+            <div className='flex gap-2 justify-between w-full md:w-fit'>
               <EditUser id={user.id} />
               <DeleteUser id={user.id} />
             </div>

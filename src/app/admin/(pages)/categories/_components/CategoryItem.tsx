@@ -4,7 +4,7 @@ import DeleteCategory from './DeleteCategory'
 
 const CategoryItem = ({ category,index }: {category: Category, index: number}) => {
   return (
-    <div className='w-[625px] mx-auto p-5 border bg-white rounded-xl flex justify-between items-center mb-5'>
+    <div className='w-[625px] max-w-[90%] mx-auto p-5 border bg-white rounded-xl flex justify-between items-center mb-5'>
       <h3> 
         {index}. {category.name}
       </h3>

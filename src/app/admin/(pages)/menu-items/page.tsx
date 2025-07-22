@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='element-center py-44 text-3xl '>Under development...</div>
   )
 }
 

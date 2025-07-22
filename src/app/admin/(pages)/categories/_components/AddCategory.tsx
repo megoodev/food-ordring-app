@@ -33,15 +33,15 @@ const AddCategory = () => {
         <h2 className="text-primary text-center font-semibold text-2xl">Add New Category</h2>
       </div>
 
-      <form action={action} className="w-[625px] mx-auto">
-        <div className="flex gap-5" >
-          <div className="w-full flex gap-1">
-            <Label  className="w-[140px]">
+      <form action={action} className="w-[625px] max-w-[90%] mx-auto">
+        <div className="flex gap-5 flex-col md:flex-row" >
+          <div className="w-full flex-col md:flex-row flex gap-1">
+            <Label  className="w-[140px] mb-2 md:mb-0">
               Category Name:
             </Label>
-            <Input type="text" name="name"/>
+            <Input  type="text" name="name"/>
           </div>
-          <Button disabled={pending} className="rounded-xl w-[100px]" type="submit">{pending? 'loading...':'create'}</Button>
+          <Button disabled={pending} className="rounded-xl w-[100%] md:w-[100px]" type="submit">{pending? 'loading...':'create'}</Button>
         </div>
         {state &&state.error && state?.error?.name && (
           <p className="text-destructive ms-28  text-sm font-medium">

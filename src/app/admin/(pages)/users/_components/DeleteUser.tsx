@@ -31,7 +31,7 @@ const DeleteUser = ({ id }: { id: string }) => {
     }
   }, [state, state?.status, state?.error])
   return (
-    <Button onClick={() => handleDelete(id)} className='rounded-xl'><TrashIcon/></Button>
+    <Button onClick={() => handleDelete(id)} className='rounded-xl flex-1 md:flex-0'><span className='md:hidden'>Delete</span><TrashIcon/></Button>
   )
 }
 

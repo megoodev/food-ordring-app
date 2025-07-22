@@ -58,11 +58,11 @@ const Form = ({ user }: { user: Session['user'] }) => {
     setSelectedImage(user.image as string);
   }, [user.image]);
   return (
-    <form action={action}>
-      <div className='flex  items-start mt-5 gap-10'>
-        <div className='mt-5 rounded-full overflow-hidden relative w-32 h-32'>
+    <form action={action} className="border rounded-lg shadow-lg">
+      <div className='flex items-start flex-col lg:flex-row mt-5 gap-10'>
+        <div className='mt-5 rounded-full overflow-hidden relative w-40 h-40 !mx-auto'>
           <Image src={selectedImage} alt="user-image" fill />
-          <div className="absolute -top-2 -right-2 hover:opacity-100 opacity-20 transition-opacity duration-300">
+          <div className={`${selectedImage !== '' ? 'opacity-0': 'opacity-100'} absolute -top-1 -left-1 hover:opacity-100 transition-opacity duration-300`}>
             <UploadImage setSelectedImage={setSelectedImage} />
           </div>
         </div>
@@ -121,7 +121,7 @@ const UploadImage = ({ setSelectedImage }: { setSelectedImage: (image: string) =
         name="image"
         id="image-upload"
       />
-      <Label htmlFor="image-upload" className="cursor-pointer rounded-full w-36 h-36 hover:bg-gray-50/10 element-center">
+      <Label htmlFor="image-upload" className="cursor-pointer rounded-full w-42 h-42 border hover:bg-gray-50/10 element-center">
         <CameraIcon />
       </Label>
     </>
