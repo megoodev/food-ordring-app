@@ -58,7 +58,7 @@ const Form = ({ user }: { user: Session['user'] }) => {
     setSelectedImage(user.image as string);
   }, [user.image]);
   return (
-    <form action={action} className="border rounded-lg shadow-lg">
+    <form action={action} className="border rounded-lg shadow-lg p-10">
       <div className='flex items-start flex-col lg:flex-row mt-5 gap-10'>
         <div className='mt-5 rounded-full overflow-hidden relative w-40 h-40 !mx-auto'>
           <Image src={selectedImage} alt="user-image" fill />
@@ -68,7 +68,7 @@ const Form = ({ user }: { user: Session['user'] }) => {
         </div>
 
 
-        <div className='flex-1 w-full p-5 rounded-lg'>
+        <div className='flex-1 w-full  rounded-lg'>
           {getFormFaileds().map((field: IFormField) => {
             const fieldValue = state?.formData?.get(field.name) ?? formData.get(field.name) as FormDataEntryValue | undefined;
             return (
