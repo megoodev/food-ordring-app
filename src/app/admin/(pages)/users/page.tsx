@@ -11,7 +11,7 @@ const usersPage = async () => {
 
   return (
     <main>
-      <div className='container element-center py-10'>
+      <div className='container element-center py-10 flex flex-col gap-5'>
 
         {users.map((user: User) => (
           <div key={user.id} className='container w-[800px] max-w-[99%] flex-col  md:flex-row flex md:justify-between items-start gap-2 md:items-center p-5 border bg-white rounded-xl  py-5'>
