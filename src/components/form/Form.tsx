@@ -62,7 +62,7 @@ const Form = ({ user }: { user: Session['user'] }) => {
       <div className='flex items-start flex-col lg:flex-row mt-5 gap-10'>
         <div className='mt-5 rounded-full overflow-hidden relative w-40 h-40 !mx-auto'>
           <Image src={selectedImage} alt="user-image" fill/>
-          <div className=' absolute -top-1 -left-1 hover:opacity-100 opacity-0 transition-opacity duration-300'>
+          <div className=' absolute -top-1 -left-1 hover:opacity-100 opacity-20  transition-opacity duration-300'>
             <UploadImage setSelectedImage={setSelectedImage} />
           </div>
         </div>
