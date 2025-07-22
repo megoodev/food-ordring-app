@@ -10,7 +10,7 @@ import { updateProfile } from "@/app/profile/_actions/profile"
 import { ValidationErrors } from "@/validations/auth"
 
 import { Session } from "next-auth"
-import { toast } from "sonner"
+import { toast } from "react-hot-toast"
 import Image from "next/image"
 import { Label } from "../ui/label"
 import { CameraIcon } from "lucide-react"
@@ -47,13 +47,13 @@ const Form = ({ user }: { user: Session['user'] }) => {
 
   const [state, action, pending] = useActionState(updateProfile.bind(null, isAdmin), initialState)
 
-  const shouldShowToast = state?.message && state.status;
+
 
   useEffect(() => {
-    if (shouldShowToast) {
-      toast.success(state.message);
+    if (state.status === 200) {
+      toast.success(state?.message as string || "Profile updated successfully");
     }
-  }, [shouldShowToast, state?.message]);
+  }, [state.status, state?.message]);
   useEffect(() => {
     setSelectedImage(user.image as string);
   }, [user.image]);

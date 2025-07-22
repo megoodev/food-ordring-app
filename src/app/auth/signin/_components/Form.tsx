@@ -6,7 +6,7 @@ import useFormFields from '@/hooks/useFormFields'
 import { IFormField } from '@/lib/types/app'
 import { FormEvent, useRef, useState } from 'react'
 import { signIn } from "next-auth/react";
-import { toast } from 'sonner'
+import { toast } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 const Form = () => {
   const formRef = useRef<HTMLFormElement>(null)

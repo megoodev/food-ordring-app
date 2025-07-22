@@ -16,7 +16,7 @@ import { EditIcon } from 'lucide-react'
 import { useActionState, useEffect } from 'react'
 import { ValidationError } from 'next/dist/compiled/amphtml-validator'
 import { editCategories } from '../_actions/category'
-import { toast } from 'sonner'
+import { toast } from 'react-hot-toast'
 
 const EditCategory = ({ category }: { category: Category }) => {
   type InitialStateType = {
@@ -31,8 +31,10 @@ const EditCategory = ({ category }: { category: Category }) => {
   };
   const [state, action, pending] = useActionState(editCategories.bind(null, category.id), initialState)
   useEffect(()=> {
-    toast.success(state?.message)
-  },[state, state?.message])
+    if(state.status === 200){
+      toast.success(state?.message as string || "Category updated successfully")
+    }
+  },[state.status, state?.message])
   return (
     <Dialog>
       <DialogTrigger asChild>

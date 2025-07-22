@@ -9,7 +9,7 @@ import { signUp } from "@/server/_action/auth"
 import { ValidationErrors } from "@/validations/auth"
 import { useRouter } from "next/navigation"
 import { useActionState, useEffect } from "react"
-import { toast } from "sonner"
+import { toast } from "react-hot-toast"
 
 const Form = () => {
   const router = useRouter()

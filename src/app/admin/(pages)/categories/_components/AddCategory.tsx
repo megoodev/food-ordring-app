@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label"
 import { ValidationError } from "next/dist/compiled/amphtml-validator"
 import { useActionState, useEffect } from "react"
 import { AddCategories } from "../_actions/category"
-import { toast } from "sonner"
+import { toast } from 'react-hot-toast'
 
 const AddCategory = () => {
   type InitialStateType = {
@@ -23,8 +23,10 @@ const AddCategory = () => {
   const [state, action, pending] = useActionState(AddCategories, initialState)
 
   useEffect(()=> {
-      toast.success(state.message);
-  }, [state, state.message]);
+    if(state.status && state.status === 201){
+      toast.success(state?.message as string || "Category added successfully");
+    }
+  }, [state.status]);
   return (
     <section className="py-10 mb-5 flex-col container ">
       <div className="mb-10 ">

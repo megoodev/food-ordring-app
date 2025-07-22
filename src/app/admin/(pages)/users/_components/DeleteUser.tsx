@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { TrashIcon } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { removeUser } from '../_actions/users'
-import { toast } from 'sonner'
+import { toast } from 'react-hot-toast'
 
 const DeleteUser = ({ id }: { id: string }) => {
   const [state, setState] = useState<{
@@ -25,7 +25,7 @@ const DeleteUser = ({ id }: { id: string }) => {
   }
   useEffect(() => {
     if (state?.status === 200) {
-      toast.success(state.message)
+      toast.success(state?.message as string || "User deleted successfully")
     } else if (state?.error) {
       toast.error(state.error)
     }
